@@ -5,15 +5,10 @@
     <color name="primary_light">#BBDEFB</color>
     <color name="accent">#00BCD4</color>
     <color name="primary_text">#212121</color>
-    <color name="secondary_text">#727272</color>
     <color name="icons">#FFFFFF</color>
-    <color name="divider">#B6B6B6</color>
     <color name="white">#FFFFFF</color>
     <color name="super_light_grey">#FAFAFA</color>
     <color name="line_grey">#D7D7D7</color>
     <color name="black_87pc">#DD000000</color>
     <color name="scrim">#99323232</color>
-    <color name="text_light">@android:color/white</color>
-
-    <color name="dark_icon">#99000000</color>
 </resources>
