@@ -5,7 +5,7 @@ Animate
     <img src="images/web.png" alt="Web Icons"/>
 </p>
 
-(You'll find the supporting medium article for this project here!)
+(You'll find the supporting medium article for this project here!) - Link coming soon ;)
 
 Animate is a simple application demoing meaningful motion on Android The applications takes a look at a bunch of different Material Style animations, including:
 

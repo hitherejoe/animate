@@ -15,8 +15,6 @@
         0,0.71l1.31,1.31C6.97,3.26 6,5.01 6,7h12c0,-1.99 -0.97,-3.75
         -2.47,-4.84zM10,5H9V4h1v1zm5,0h-1V4h1v1z
     </string>
-    <integer name="android_pivot_x">12.5</integer>
-    <integer name="android_pivot_y">12.5</integer>
     <integer name="android_stroke_width">2</integer>
 
     <color name="android_stroke_green">#8BC34A</color>

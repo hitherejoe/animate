@@ -10,8 +10,8 @@
         android:pathData="@string/path_android"/>
     <group
         android:name="android_group"
-        android:pivotX="@integer/android_pivot_x"
-        android:pivotY="@integer/android_pivot_y"
+        android:pivotX="12.5"
+        android:pivotY="12.5"
         android:scaleX="0.0"
         android:scaleY="0.0">
         <path
