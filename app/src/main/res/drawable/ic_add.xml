@@ -6,8 +6,8 @@
         android:viewportWidth="@integer/add_remove_viewport_width">
     <group
         android:name="@string/groupAddRemove"
-        android:pivotX="12"
-        android:pivotY="12">
+        android:pivotX="@integer/add_remove_pivot_x"
+        android:pivotY="@integer/add_remove_pivot_y">
         <path
             android:fillColor="@color/add_remove_stroke_color"
             android:pathData="@string/path_add"/>

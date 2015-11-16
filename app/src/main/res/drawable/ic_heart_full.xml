@@ -7,7 +7,7 @@
     android:viewportWidth="@integer/heart_fill_viewport_width">
 
     <path
-        android:fillColor="@color/fab_heart_full"
+        android:fillColor="@color/stroke_color_heart"
         android:pathData="@string/heart_fill_full_path"/>
 
 </vector>

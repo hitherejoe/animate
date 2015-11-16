@@ -3,11 +3,11 @@
                android:duration="500"
                android:transitionOrdering="sequential">
     <slide android:interpolator="@android:interpolator/decelerate_cubic"
-        android:slideEdge="bottom">
+           android:slideEdge="bottom">
         <targets>
             <target android:excludeId="@android:id/navigationBarBackground"/>
             <target android:excludeId="@android:id/statusBarBackground"/>
         </targets>
     </slide>
-    <changeBounds android:interpolator="@android:interpolator/bounce" />
+    <changeBounds android:interpolator="@android:interpolator/bounce"/>
 </transitionSet>

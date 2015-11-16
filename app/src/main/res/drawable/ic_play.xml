@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-        android:height="48dp"
-        android:width="48dp"
-        android:viewportHeight="48"
-        android:viewportWidth="48">
+        android:width="@dimen/play_pause_width"
+        android:height="@dimen/play_pause_height"
+        android:viewportHeight="@integer/viewport_play_pause_width"
+        android:viewportWidth="@integer/viewport_play_pause_width">
     <group>
         <path android:name="d"
-              android:fillColor="@color/stroke_color_battery"
-              android:pathData="@string/play_path" />
+              android:fillColor="@color/play_pause_stroke"
+              android:pathData="@string/play_path"/>
     </group>
 </vector>

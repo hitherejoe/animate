@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vector
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:height="@dimen/android_size"
-    android:width="@dimen/android_size"
-    android:viewportHeight="@integer/viewport_android_height"
-    android:viewportWidth="@integer/viewport_android_width" >
+    android:width="@dimen/android_width"
+    android:height="@dimen/android_height"
+    android:viewportHeight="@integer/android_viewport_height"
+    android:viewportWidth="@integer/android_viewport_width">
     <path
-        android:fillColor="@color/stroke_grey_android"
+        android:fillColor="@color/android_stroke_grey"
         android:pathData="@string/path_android"/>
     <group
         android:name="android_group"
-        android:pivotX="12.5"
-        android:pivotY="12.5"
+        android:pivotX="@integer/android_pivot_x"
+        android:pivotY="@integer/android_pivot_y"
         android:scaleX="0.0"
         android:scaleY="0.0">
         <path
             android:name="android"
-            android:fillColor="@color/stroke_green_android"
+            android:fillColor="@color/android_stroke_green"
             android:pathData="@string/path_android"/>
     </group>
 </vector>

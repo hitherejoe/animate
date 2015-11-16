@@ -3,14 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:ordering="together">
     <objectAnimator
+        android:duration="@integer/android_duration"
         android:interpolator="@android:anim/decelerate_interpolator"
-        android:duration="@integer/duration_android"
         android:propertyName="scaleX"
         android:valueFrom="0.0"
         android:valueTo="1.0"/>
     <objectAnimator
+        android:duration="@integer/android_duration"
         android:interpolator="@android:anim/decelerate_interpolator"
-        android:duration="@integer/duration_android"
         android:propertyName="scaleY"
         android:valueFrom="0.0"
         android:valueTo="1.0"/>

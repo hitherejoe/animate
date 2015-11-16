@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <vector
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="@dimen/android_size"
-    android:height="@dimen/android_size"
-    android:viewportHeight="@integer/viewport_android_height"
-    android:viewportWidth="@integer/viewport_android_width">
+    android:width="@dimen/android_width"
+    android:height="@dimen/android_height"
+    android:viewportHeight="@integer/android_viewport_height"
+    android:viewportWidth="@integer/android_viewport_width">
     <path
-        android:fillColor="@color/stroke_green_android"
+        android:fillColor="@color/android_stroke_green"
         android:pathData="@string/path_android"/>
 </vector>
