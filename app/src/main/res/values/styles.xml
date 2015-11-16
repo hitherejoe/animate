@@ -1,0 +1,106 @@
+<resources>
+
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="colorControlNormal">@color/icons</item>
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:textColorPrimaryInverse">@color/text_light</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerItemStyle</item>
+    </style>
+
+    <style name="SpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textColor">@color/black_87pc</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="AppTheme.ExplodeContent" parent="AppTheme.NoActionBar">
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowExitTransition">@transition/slide_explode</item>
+        <item name="android:windowReenterTransition">@android:transition/slide_top</item>
+    </style>
+
+    <style name="AppTheme.ActionBar" parent="AppTheme">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="drawerArrowStyle">@style/HamburgerIconStyle</item>
+        <item name="android:itemTextAppearance">@style/OptionsMenuTextColor</item>
+        <item name="color">@color/icons</item>
+        <item name="colorControlNormal">@color/primary</item>
+    </style>
+
+    <style name="AppTheme.ActionBarDarkIcons" parent="AppTheme.ActionBar">
+        <item name="colorControlNormal">@color/icons</item>
+    </style>
+
+    <style name="AlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowTitleStyle">@style/DialogTitleText</item>
+        <item name="colorAccent">@color/primary</item>
+    </style>
+
+    <style name="DialogTitleText">
+        <item name="android:textColor">@color/black_87pc</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+    </style>
+
+    <style name="HamburgerIconStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/icons</item>
+        <item name="colorControlNormal">@color/icons</item>
+    </style>
+
+    <style name="OptionsMenuTextColor" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="TitleTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textColor">@color/accent</item>
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextOptionsListStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:checked">true</item>
+        <item name="android:textColor">@color/black_87pc</item>
+        <item name="android:textSize">@dimen/text_body</item>
+    </style>
+
+    <style name="ContentTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textColor">@color/black_87pc</item>
+        <item name="android:textSize">@dimen/text_body</item>
+    </style>
+
+    <style name="CheckBoxStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:checked">true</item>
+    </style>
+
+    <style name="TranslucentActivity" parent="AppTheme">
+        <item name="android:windowBackground">@color/scrim</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+</resources>

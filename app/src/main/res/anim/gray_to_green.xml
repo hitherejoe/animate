@@ -1,0 +1,6 @@
+<objectAnimator
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="@integer/duration_android"
+    android:propertyName="fillColor"
+    android:valueFrom="@color/stroke_grey_android"
+    android:valueTo="@color/stroke_green_android"/>

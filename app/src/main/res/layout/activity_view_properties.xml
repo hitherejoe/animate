@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_animate_alpha"
+                    style="@style/TextOptionsListStyle"
+                    android:layout_alignBaseline="@+id/check_animate_alpha"
+                    android:layout_toStartOf="@+id/check_animate_alpha"
+                    android:text="@string/text_animate_alpha"/>
+
+                <CheckBox
+                    android:id="@+id/check_animate_alpha"
+                    style="@style/CheckBoxStyle"/>
+
+                <TextView
+                    android:id="@+id/text_animate_scale"
+                    style="@style/TextOptionsListStyle"
+                    android:layout_alignBaseline="@+id/check_animate_scale"
+                    android:layout_below="@id/text_animate_alpha"
+                    android:layout_toStartOf="@+id/check_animate_scale"
+                    android:text="@string/text_animate_scale"/>
+
+                <CheckBox
+                    android:id="@+id/check_animate_scale"
+                    style="@style/CheckBoxStyle"
+                    android:layout_below="@id/check_animate_alpha"/>
+
+                <TextView
+                    android:id="@+id/text_animate_z"
+                    style="@style/TextOptionsListStyle"
+                    android:layout_alignBaseline="@+id/check_animate_z"
+                    android:layout_below="@id/text_animate_scale"
+                    android:layout_toLeftOf="@+id/check_animate_z"
+                    android:text="@string/text_animate_z"/>
+
+                <CheckBox
+                    android:id="@+id/check_animate_z"
+                    style="@style/CheckBoxStyle"
+                    android:layout_below="@id/check_animate_scale"/>
+
+                <TextView
+                    android:id="@+id/text_animation_duration"
+                    style="@style/TextOptionsListStyle"
+                    android:layout_alignBaseline="@+id/check_animation_duration"
+                    android:layout_below="@id/text_animate_z"
+                    android:layout_toLeftOf="@+id/check_animation_duration"
+                    android:text="@string/text_animate_duration"/>
+
+                <CheckBox
+                    android:id="@+id/check_animation_duration"
+                    style="@style/CheckBoxStyle"
+                    android:layout_below="@id/check_animate_z"/>
+
+                <TextView
+                    android:id="@+id/text_animation_delay"
+                    style="@style/TextOptionsListStyle"
+                    android:layout_alignBaseline="@+id/check_animation_delay"
+                    android:layout_below="@id/text_animation_duration"
+                    android:layout_toLeftOf="@+id/check_animation_delay"
+                    android:text="@string/text_animate_delay"/>
+
+                <CheckBox
+                    android:id="@+id/check_animation_delay"
+                    style="@style/CheckBoxStyle"
+                    android:layout_below="@id/check_animation_duration"/>
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/TitleTextStyle"
+                android:layout_marginTop="8dp"
+                android:padding="0dp"
+                android:text="@string/text_title_interpolator"/>
+
+            <Spinner
+                android:id="@+id/spinner_interpolators"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:entries="@array/interpolators"/>
+
+            <Button
+                android:id="@+id/text_start_animation"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:padding="16dp"
+                android:text="@string/text_animate"
+                android:textColor="@color/accent"/>
+
+            <Button
+                android:id="@+id/text_reset_animations"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:padding="16dp"
+                android:text="@string/text_reset"
+                android:textColor="@android:color/holo_red_light"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_smile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_emoticon_smile"
+                app:fabSize="normal"/>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

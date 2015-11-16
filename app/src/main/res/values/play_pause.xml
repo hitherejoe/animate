@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pause_path">M12,10L20,10L20,38L12,38ZM28,10L36,10L36,38L28,38Z</string>
+    <string name="play_path">M16,24L38,24L27.3,30.8L16,38ZM16,10L27.3,17.2L38,24L16,24Z</string>
+</resources>

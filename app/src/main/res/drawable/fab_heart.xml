@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:constantSize="true">
+
+    <item
+        android:id="@+id/liked"
+        android:state_checked="true"
+        android:drawable="@drawable/ic_heart" />
+
+    <item
+        android:id="@+id/not_liked"
+        android:drawable="@drawable/ic_heart_empty"/>
+
+    <transition
+        android:fromId="@id/not_liked"
+        android:toId="@id/liked">
+
+        <animated-vector android:drawable="@drawable/heart_anim">
+
+            <target
+                android:name="clip"
+                android:animation="@animator/heart_fill" />
+
+        </animated-vector>
+    </transition>
+
+</animated-selector>

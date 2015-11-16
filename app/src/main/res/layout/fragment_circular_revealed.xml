@@ -1,0 +1,24 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.hitherejoe.animate.ui.fragment.CircularRevealedFragment">
+
+    <ImageView
+        android:id="@+id/image_header"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/content_description_image_header"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cat_shocked"/>
+
+    <TextView
+        android:id="@+id/text_message"
+        style="@style/ContentTextStyle"
+        android:layout_below="@id/image_header"
+        android:background="@color/super_light_grey"
+        android:lineSpacingExtra="2dp"
+        android:text="@string/text_revealed_content"/>
+
+</RelativeLayout>

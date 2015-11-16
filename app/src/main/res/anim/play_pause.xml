@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Resource\anim\play_pause.xml -->
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+                android:duration="250"
+                android:propertyName="pathData"
+                android:valueFrom="@string/play_path"
+                android:valueTo="@string/pause_path"
+                android:valueType="pathType" />

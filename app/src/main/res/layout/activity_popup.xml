@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:onClick="dismiss">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:elevation="40dp"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:transitionName="@string/transition_morph_view">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/content_description_image_smile_emoticon"
+            android:src="@drawable/ic_emoticon_smile_grey"/>
+
+        <TextView
+            style="@style/ContentTextStyle"
+            android:gravity="center"
+            android:text="@string/text_hello_message"/>
+
+        <TextView
+            style="@style/TitleTextStyle"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/text_ok_go_now"/>
+
+    </LinearLayout>
+
+</FrameLayout>

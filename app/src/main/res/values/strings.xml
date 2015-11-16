@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">Animate!</string>
+
+    <!-- Activity Labels -->
+    <string name="label_view_property_animator">View Property Animator</string>
+    <string name="label_object_animator">Object Animator</string>
+    <string name="label_morph_transitions">Morph transitions</string>
+    <string name="label_circular_reveal">Circular Reveal</string>
+    <string name="label_shared_content_transitions">Shared Elements</string>
+    <string name="label_explode_window_content_transitions">Explode Window Content</string>
+    <string name="label_shared_element_transitions">Shared</string>
+    <string name="label_window_content_transitions">Window Content</string>
+    <string name="label_animated_vector_drawables">Animated Vectors</string>
+    <string name="label_interpolators">Interpolators</string>
+
+    <!-- View Property Animator Activity -->
+    <string name="text_title_interpolator">Interpolator</string>
+    <string name="option_select">Select interpolator&#8230;</string>
+    <string name="text_animate">Start animation</string>
+    <string name="text_reset">Reset</string>
+    <string name="text_animate_alpha">Animate alpha</string>
+    <string name="text_animate_scale">Animate scale</string>
+    <string name="text_animate_z">Animate Z axis</string>
+    <string name="text_animate_duration">Animation duration</string>
+    <string name="text_animate_delay">Animation delay</string>
+    <string name="text_animate_interpolator">Animation interpolator</string>
+    <string name="text_animate_listener">Animation listener</string>
+
+    <!-- Object Animator Activity -->
+    <string name="text_hipster_ipsum">Gluten-free echo park bushwick kinfolk flannel poutine. Selvage fanny pack banjo, actually distillery ethical organic put a bird on it art party. Letterpress distillery tilde +1 blog, cray green juice crucifix hella meditation. Master cleanse brunch wayfarers, freegan schlitz williamsburg chambray selvage flannel kickstarter 90\'s distillery direct trade jean shorts. Pickled VHS wolf, fingerstache asymmetrical shabby chic YOLO tote bag bushwick kombucha williamsburg. Chambray letterpress cliche lo-fi, blue bottle bespoke poutine neutra thundercats cardigan gluten-free franzen distillery tofu. Kale chips taxidermy brooklyn, street art etsy raw denim art party butcher chartreuse truffaut.</string>
+
+    <!-- Interpolators Activity -->
+    <string name="text_animate_view">Start animation</string>
+
+    <!-- Circular Reveal Activity -->
+    <string name="circular_reveal_text">Click the FAB to reveal&#8230;\n\nBehind the couch jump around on couch, meow constantly until given food, chase laser and eat from dog\'s food. Spot something, big eyes, big eyes, crouch, shake butt, prepare to pounce make muffins, but hate dog, or tuxedo cats always looking dapper destroy the blinds. Knock dish off table head butt cant eat out of my own dish why must they do that. Chirp at birds flop over. Ears back wide eyed sit by the fire yet always hungry. Hide from vacuum cleaner have secret plans cough furball tuxedo cats always looking dapper hide at bottom of staircase to trip human, so destroy couch as revenge. Behind the couch intrigued by the shower. Peer out window, chatter at birds, lure them to mouth hopped up on catnip, and i am the best, chase mice. Stare at wall turn and meow stare at wall some more meow again continue staring ignore the squirrels, you\'ll never catch them anyway. Pooping rainbow while flying in a toasted bread costume in space chase ball of string chew on cable for leave hair everywhere eat prawns daintily with a claw then lick paws clean wash down prawns with a lap of carnation milk then retire to the warmest spot on the couch to claw at the fabric before taking a catnap but eat prawns daintily with a claw then lick paws clean wash down prawns with a lap of carnation milk then retire to the warmest spot on the couch to claw at the fabric before taking a catnap but intrigued by the shower. Sun bathe eat a plant, kill a hand and lounge in doorway but intently sniff hand. Swat at dog always hungry. Chase laser wake up human for food at 4am yet my left donut is missing, as is my right, for always hungry. Who\'s the baby hiss at vacuum cleaner. </string>
+    <string name="text_revealed_content">Oh wow, hey there!\n\nLooks like you just used a circular reveal to show this fragment! Looked pretty cool didn\'t it&#8230;</string>
+
+    <!-- Morph transitions actibity -->
+    <string name="text_morph_me">Morph me!</string>
+
+    <!-- Popup activity -->
+    <string name="text_ok_go_now">OK, you can go now</string>
+    <string name="text_hello_message">Think of all the great things you could use this transition for!</string>
+
+    <!-- General Messages -->
+    <string name="text_hipster_ipsum_longer">Gluten-free echo park bushwick kinfolk flannel poutine. Selvage fanny pack banjo, actually distillery ethical organic put a bird on it art party. Letterpress distillery tilde +1 blog, cray green juice crucifix hella meditation.</string>
+
+    <!-- Transitions -->
+    <string name="transition_avatar">AvatarTransition</string>
+    <string name="transition_morph_view" translatable="false">morph_view_transition</string>
+    <string name="transition_name" translatable="false">square_transition</string>
+    <string name="transition_toolbar_name" translatable="false">toolbar_transition</string>
+    <string name="transition_shared_toolbar" translatable="false">shared_toolbar_transition</string>
+
+    <!-- Content Descriptions -->
+    <string name="content_description_image_header">Image header</string>
+    <string name="content_description_image_smile_emoticon">Smile emotion</string>
+
+    <string-array name="interpolators">
+        <item>None</item>
+        <item>FastOutLinearInInterpolator</item>
+        <item>FastOutSlowInInterpolator</item>
+        <item>LinearOutSlowInInterpolator</item>
+        <item>AccelerateDecelerateInterpolator</item>
+        <item>AccelerateInterpolator</item>
+        <item>DecelerateInterpolator</item>
+        <item>AnticipateInterpolator</item>
+        <item>AnticipateOvershootInterpolator</item>
+        <item>BounceInterpolator</item>
+        <item>LinearInterpolator</item>
+        <item>OvershootInterpolator</item>
+    </string-array>
+
+    <string-array name="transitions">
+        <item>Fade</item>
+        <item>Slide</item>
+        <item>Explode</item>
+    </string-array>
+
+    <string-array name="animation_apis">
+        <item>View Property Animator</item>
+        <item>Object Animator</item>
+        <item>Interpolators</item>
+        <item>Circular Reveal</item>
+        <item>Morph Transitions</item>
+        <item>Shared Transitions</item>
+        <item>Window Content Transitions</item>
+        <item>Shared Element Transitions</item>
+        <item>Animated Vector Drawables</item>
+    </string-array>
+
+    <string-array name="items">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:background="@color/white">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:fitsSystemWindows="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:background="@color/primary"
+            android:theme="@style/AppTheme.ActionBarDarkIcons"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <TextView android:id="@+id/text_shared_transition"
+                  android:layout_width="0dp"
+                  android:layout_height="120dp"
+                  android:layout_marginBottom="16dp"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginEnd="8dp"
+                  android:layout_marginTop="16dp"
+                  android:layout_weight="1"
+                  android:background="@drawable/touchable_background_light_blue"
+                  android:gravity="center"
+                  android:text="Click!"
+                  android:textColor="@color/white"
+                  android:textSize="@dimen/text_body"
+                  android:transitionName="@string/transition_name"/>
+
+        <RelativeLayout android:id="@+id/text_shared_toolbar"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/touchable_background_light_blue"
+                        android:clickable="true"
+                        android:transitionName="@string/transition_shared_toolbar">
+
+            <TextView
+                android:id="@+id/text_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/primary"
+                android:gravity="left"
+                android:padding="16dp"
+                android:text="@string/label_shared_element_transitions"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_body"
+                android:transitionName="@string/transition_toolbar_name"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

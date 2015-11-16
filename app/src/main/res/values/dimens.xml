@@ -1,0 +1,14 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="text_title">20sp</dimen>
+    <dimen name="text_body">16sp</dimen>
+
+    <dimen name="dialog_corners">2dp</dimen>
+
+    <dimen name="team_image_large">120dp</dimen>
+
+    <dimen name="team_item_padding">12dp</dimen>
+    <dimen name="team_column_width">100dp</dimen>
+</resources>

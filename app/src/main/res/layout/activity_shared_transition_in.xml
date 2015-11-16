@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:background="@color/primary"
+            android:theme="@style/AppTheme.ActionBar"
+            android:transitionName="@string/transition_toolbar_name"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <View android:id="@+id/text_shared_transition"
+              android:layout_width="200dp"
+              android:layout_height="200dp"
+              android:layout_margin="16dp"
+              android:layout_gravity="center_horizontal"
+              android:gravity="center"
+              android:transitionName="@string/transition_shared_toolbar"
+              android:background="@drawable/touchable_background_light_blue"
+              android:layout_marginBottom="16dp"/>
+
+    <View
+        android:id="@+id/view_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/black_87pc"/>
+
+    <TextView
+        android:id="@+id/text_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:text="@string/text_hipster_ipsum_longer"
+        android:textColor="@color/black_87pc"
+        android:textSize="@dimen/text_body"/>
+
+    <TextView
+        android:id="@+id/text_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Close"
+        android:textColor="@color/accent"
+        android:textSize="@dimen/text_body"/>
+
+</LinearLayout>

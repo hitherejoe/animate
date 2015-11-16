@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- provide a different drawable for each state-->
+    <item android:id="@+id/state_on"
+          android:drawable="@drawable/ic_android_green"
+          android:state_checked="true"/>
+    <item android:id="@+id/state_off"
+          android:drawable="@drawable/ic_android_grey"/>
+
+    <!-- specify transitions -->
+    <transition
+        android:fromId="@id/state_off"
+        android:toId="@id/state_on">
+        <animated-vector android:drawable="@drawable/android">
+            <target
+                android:name="android_group"
+                android:animation="@anim/appear" />
+            <target
+                android:name="android"
+                android:animation="@anim/gray_to_green" />
+        </animated-vector>
+    </transition>
+</animated-selector>

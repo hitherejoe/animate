@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_twitter_24dp">
+
+    <target
+        android:name="@string/groupHeartTwitter"
+        android:animation="@animator/rotate_twitter_to_heart" />
+
+    <target
+        android:name="@string/twitter"
+        android:animation="@animator/twitter_to_heart" />
+
+</animated-vector>
