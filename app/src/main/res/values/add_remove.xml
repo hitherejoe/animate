@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- geometry -->
+    <dimen name="add_remove_height">56dp</dimen>
+    <dimen name="add_remove_width">56dp</dimen>
+    <integer name="add_remove_viewport_width">48</integer>
+    <integer name="add_remove_viewport_height">48</integer>
+    <integer name="add_remove_viewport_center_x">24</integer>
+    <integer name="add_remove_viewport_center_y">24</integer>
+
+    <string name="path_remove">M 19.0,13.0 h 0.0 v 0.0 h 0.0 v 0.0 H 5.0 v 0.0 h 0.0 V 13.0 h 0.0 v -2.0 h 14.0 v 2.0 L 19.0,13.0</string>
+    <string name="path_add">M 19.0,13.0 h -6.0 v 6.0 h -2.0 v -6.0 H 5.0 v -2.0 h 6.0 V 5.0 h 2.0 v 6.0 h 6.0 v 2.0 L 19.0,13.0</string>
+    <integer name="add_remove_stroke_width">2</integer>
+
+    <!-- names -->
+    <string name="add">plus</string>
+    <string name="remove">minus</string>
+    <string name="groupAddRemove">groupAddRemove</string>
+
+    <!-- drawing -->
+    <color name="add_remove_stroke_color">#999</color>
+
+    <!-- timing -->
+    <integer name="add_remove_duration">450</integer>
+</resources>

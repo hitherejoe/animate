@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="@dimen/add_remove_width"
+        android:height="@dimen/add_remove_height"
+        android:viewportHeight="@integer/add_remove_viewport_height"
+        android:viewportWidth="@integer/add_remove_viewport_width">
+    <group
+        android:name="@string/groupAddRemove"
+        android:pivotX="12"
+        android:pivotY="12">
+        <path
+            android:fillColor="@color/add_remove_stroke_color"
+            android:pathData="@string/path_add"/>
+    </group>
+</vector>

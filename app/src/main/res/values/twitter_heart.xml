@@ -19,5 +19,5 @@
     <color name="stroke_color_twitter">#03A9F4</color>
 
     <!-- timing -->
-    <integer name="duration_heart_twitter">450</integer>
+    <integer name="twitter_heart_duration">450</integer>
 </resources>

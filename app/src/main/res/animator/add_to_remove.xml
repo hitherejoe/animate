@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <objectAnimator
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:duration="@integer/twitter_heart_duration"
+    android:duration="@integer/add_remove_duration"
     android:interpolator="@android:interpolator/fast_out_slow_in"
     android:propertyName="pathData"
-    android:valueFrom="@string/path_twitter"
-    android:valueTo="@string/path_heart"
+    android:valueFrom="@string/path_add"
+    android:valueTo="@string/path_remove"
     android:valueType="pathType"/>
