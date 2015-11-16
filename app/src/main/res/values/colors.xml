@@ -15,5 +15,5 @@
     <color name="scrim">#99323232</color>
     <color name="text_light">@android:color/white</color>
 
-    <color name="dark_icon">#99000000</color> <!-- 60% black-->
+    <color name="dark_icon">#99000000</color>
 </resources>
