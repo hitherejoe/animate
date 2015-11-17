@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical">
 
     <android.support.design.widget.AppBarLayout
@@ -14,22 +14,22 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:layout_scrollFlags="scroll|enterAlways"
             android:background="@color/primary"
-            android:theme="@style/AppTheme.ActionBar"
-            android:transitionName="@string/transition_toolbar_name"/>
+            android:theme="@style/AppTheme.ActionBarLightIcons"
+            android:transitionName="@string/transition_toolbar_name"
+            app:layout_scrollFlags="scroll|enterAlways"/>
 
     </android.support.design.widget.AppBarLayout>
 
     <View android:id="@+id/text_shared_transition"
-              android:layout_width="200dp"
-              android:layout_height="200dp"
-              android:layout_margin="16dp"
-              android:layout_gravity="center_horizontal"
-              android:gravity="center"
-              android:transitionName="@string/transition_shared_toolbar"
-              android:background="@drawable/touchable_background_light_blue"
-              android:layout_marginBottom="16dp"/>
+          android:layout_width="200dp"
+          android:layout_height="200dp"
+          android:layout_gravity="center_horizontal"
+          android:layout_margin="16dp"
+          android:layout_marginBottom="16dp"
+          android:background="@drawable/touchable_background_light_blue"
+          android:gravity="center"
+          android:transitionName="@string/transition_shared_toolbar"/>
 
     <View
         android:id="@+id/view_separator"
@@ -54,8 +54,8 @@
         android:id="@+id/text_close"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="16dp"
         android:layout_gravity="center_horizontal"
+        android:padding="16dp"
         android:text="Close"
         android:textColor="@color/accent"
         android:textSize="@dimen/text_body"/>

@@ -1,8 +1,7 @@
 package com.hitherejoe.animate.ui.activity;
 
-import android.app.ActionBar;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.ActionBar;
 import android.transition.Slide;
 import android.view.Gravity;
 
@@ -11,7 +10,7 @@ import com.hitherejoe.animate.R;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class SharedTransitionsInActionbarActivity extends AppCompatActivity {
+public class SharedTransitionsInActionbarActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +24,7 @@ public class SharedTransitionsInActionbarActivity extends AppCompatActivity {
         slide.addTarget(R.id.view_separator);
         getWindow().setEnterTransition(slide);
 
-        ActionBar actionBar = getActionBar();
+        ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) actionBar.setDisplayHomeAsUpEnabled(true);
     }
 

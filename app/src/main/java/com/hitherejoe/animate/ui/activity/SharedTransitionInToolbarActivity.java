@@ -1,7 +1,7 @@
 package com.hitherejoe.animate.ui.activity;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.transition.Slide;
 import android.view.Gravity;
@@ -12,7 +12,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class SharedTransitionInToolbarActivity extends AppCompatActivity {
+public class SharedTransitionInToolbarActivity extends BaseActivity {
 
     @Bind(R.id.toolbar)
     Toolbar mToolbar;
@@ -30,7 +30,8 @@ public class SharedTransitionInToolbarActivity extends AppCompatActivity {
         getWindow().setEnterTransition(slide);
 
         setSupportActionBar(mToolbar);
-        if (getSupportActionBar() != null) getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
     @OnClick(R.id.text_close)

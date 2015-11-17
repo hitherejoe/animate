@@ -7,4 +7,4 @@
           android:gravity="center"
           android:padding="16dp"
           android:textColor="@color/white"
-          android:textSize="20sp"/>
+          android:textSize="@dimen/text_title"/>

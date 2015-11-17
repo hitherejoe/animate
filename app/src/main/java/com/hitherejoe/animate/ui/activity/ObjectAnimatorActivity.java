@@ -16,6 +16,7 @@ public class ObjectAnimatorActivity extends BaseActivity {
     AdapterViewAnimator mContentFlipper;
 
     private boolean isAnimatingUp;
+    private int mContentCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,16 +25,22 @@ public class ObjectAnimatorActivity extends BaseActivity {
         ButterKnife.bind(this);
 
         isAnimatingUp = true;
-        mContentFlipper.setAdapter(new FrameAdapter(this, 20));
+        mContentCount = 20;
+        mContentFlipper.setAdapter(new FrameAdapter(this, mContentCount));
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
     public void showNext() {
-        setAnimations();
-        mContentFlipper.showNext();
-        isAnimatingUp = !isAnimatingUp;
+        if (mContentCount > 1) {
+            setAnimations();
+            mContentFlipper.showNext();
+            isAnimatingUp = !isAnimatingUp;
+            mContentCount--;
+        } else {
+            finish();
+        }
     }
 
     private void setAnimations() {

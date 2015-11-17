@@ -3,12 +3,8 @@ package com.hitherejoe.animate.ui.activity;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.transition.Transition;
-import android.transition.TransitionInflater;
 
 import com.hitherejoe.animate.R;
 
@@ -16,7 +12,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class WindowTransitionsActivity extends AppCompatActivity {
+public class WindowTransitionsActivity extends BaseActivity {
 
     @Bind(R.id.toolbar)
     Toolbar mToolbar;

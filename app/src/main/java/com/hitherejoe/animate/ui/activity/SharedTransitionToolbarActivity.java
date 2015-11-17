@@ -30,7 +30,7 @@ public class SharedTransitionToolbarActivity extends BaseActivity {
 
         setSupportActionBar(mToolbar);
         ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if (actionBar != null) actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
     @OnClick(R.id.text_close)

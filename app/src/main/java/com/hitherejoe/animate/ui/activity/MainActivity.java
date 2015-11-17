@@ -2,7 +2,6 @@ package com.hitherejoe.animate.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -12,7 +11,7 @@ import com.hitherejoe.animate.ui.adapter.AnimationApisAdapter;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Bind(R.id.recycler_animation_apis)
     RecyclerView mAnimationApisRecycler;

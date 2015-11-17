@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical">
 
     <android.support.design.widget.AppBarLayout
@@ -13,10 +13,10 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:layout_scrollFlags="scroll|enterAlways"
             android:background="@color/primary"
-            android:theme="@style/AppTheme.ActionBarDarkIcons"
-            android:transitionName="@string/transition_toolbar_name"/>
+            android:theme="@style/AppTheme.ActionBarLightIcons"
+            android:transitionName="@string/transition_toolbar_name"
+            app:layout_scrollFlags="scroll|enterAlways"/>
 
     </android.support.design.widget.AppBarLayout>
 
@@ -25,9 +25,9 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_margin="16dp"
-        android:transitionName="@string/transition_name"
+        android:layout_marginBottom="16dp"
         android:background="@color/primary_light"
-        android:layout_marginBottom="16dp"/>
+        android:transitionName="@string/transition_name"/>
 
     <View
         android:id="@+id/view_separator"
@@ -52,8 +52,8 @@
         android:id="@+id/text_close"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="16dp"
         android:layout_gravity="center_horizontal"
+        android:padding="16dp"
         android:text="Close"
         android:textColor="@color/accent"
         android:textSize="@dimen/text_body"/>

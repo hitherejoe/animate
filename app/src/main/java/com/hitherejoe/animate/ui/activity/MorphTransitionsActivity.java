@@ -23,9 +23,7 @@ public class MorphTransitionsActivity extends BaseActivity {
 
     private void setupToolbar() {
         ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
+        if (actionBar != null) actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
     @OnClick(R.id.button_morph)

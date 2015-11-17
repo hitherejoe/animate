@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-          android:id="@+id/text_name"
+<TextView android:id="@+id/text_name"
           style="?android:attr/spinnerItemStyle"
-          android:singleLine="true"
-          android:padding="16dp"
-          android:textColor="@color/black_87pc"
+          xmlns:android="http://schemas.android.com/apk/res/android"
           android:layout_width="match_parent"
-          android:layout_height="wrap_content" />
+          android:layout_height="wrap_content"
+          android:padding="16dp"
+          android:singleLine="true"
+          android:textColor="@color/black_87pc"/>

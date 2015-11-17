@@ -43,6 +43,14 @@
     <string name="text_ok_go_now">OK, you can go now</string>
     <string name="text_hello_message">Think of all the great things you could use this transition for!</string>
 
+    <!-- Activity Window Transitions Activity -->
+    <string name="text_fade_fast">Fade fast</string>
+    <string name="text_fade_slow">Fade slow</string>
+    <string name="text_slide_right">Slide right</string>
+    <string name="text_slide_bottom">Slide bottom</string>
+    <string name="text_explode">Explode</string>
+    <string name="text_explode_bounce">Explode bounce</string>
+
     <!-- General Messages -->
     <string name="text_hipster_ipsum_longer">Gluten-free echo park bushwick kinfolk flannel poutine. Selvage fanny pack banjo, actually distillery ethical organic put a bird on it art party. Letterpress distillery tilde +1 blog, cray green juice crucifix hella meditation.</string>
 

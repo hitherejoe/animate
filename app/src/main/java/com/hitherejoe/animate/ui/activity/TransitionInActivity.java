@@ -2,7 +2,6 @@ package com.hitherejoe.animate.ui.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.transition.Transition;
 import android.transition.TransitionInflater;
@@ -13,7 +12,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class TransitionInActivity extends AppCompatActivity {
+public class TransitionInActivity extends BaseActivity {
 
     public static final String EXTRA_TRANSITION = "EXTRA_TRANSITION";
     public static final String TRANSITION_FADE_FAST = "FADE_FAST";

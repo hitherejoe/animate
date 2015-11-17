@@ -105,7 +105,6 @@ public class CircularRevealActivity extends BaseActivity {
                     public void onAnimationEnd(Animator animation) {
                         fragmentContainer.setVisibility(View.VISIBLE);
                         mCircularReveal.start();
-                        clickedView.setVisibility(View.GONE);
                     }
 
                     @Override

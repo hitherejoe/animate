@@ -1,5 +1,6 @@
 package com.hitherejoe.animate.ui.activity;
 
+import android.animation.Animator;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.animation.FastOutLinearInInterpolator;
@@ -16,6 +17,8 @@ import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.OvershootInterpolator;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 
 import com.hitherejoe.animate.R;
@@ -25,6 +28,12 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class InterpolatorActivity extends BaseActivity {
+
+    @Bind(R.id.text_animate)
+    Button mAnimateText;
+
+    @Bind(R.id.layout_root)
+    RelativeLayout mLayoutRoot;
 
     @Bind(R.id.spinner_interpolators)
     Spinner mInterpolatorSpinner;
@@ -55,14 +64,36 @@ public class InterpolatorActivity extends BaseActivity {
 
     @OnClick(R.id.text_animate)
     public void animate() {
-        //TODO: Get height from screen
-        int height = 1725;
+        int padding =
+                mFloatingActionButton.getPaddingBottom() + mFloatingActionButton.getPaddingTop();
+        int height = mLayoutRoot.getHeight() - padding;
+
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null) height -= actionBar.getHeight();
+
         if (!mIsButtonAtTop) height = -height;
         mIsButtonAtTop = !mIsButtonAtTop;
         mFloatingActionButton.animate().setInterpolator(getSelectedInterpolator())
                 .setDuration(500)
                 .setStartDelay(200)
                 .translationYBy(height)
+                .setListener(new Animator.AnimatorListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+                        mAnimateText.setEnabled(false);
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        mAnimateText.setEnabled(true);
+                    }
+
+                    @Override
+                    public void onAnimationCancel(Animator animation) { }
+
+                    @Override
+                    public void onAnimationRepeat(Animator animation) { }
+                })
                 .start();
     }
 

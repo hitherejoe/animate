@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:orientation="vertical"
-              android:background="@color/white">
+              android:background="@color/white"
+              android:orientation="vertical">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -15,9 +15,9 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:layout_scrollFlags="scroll|enterAlways"
             android:background="@color/primary"
-            android:theme="@style/AppTheme.ActionBarDarkIcons"/>
+            android:theme="@style/AppTheme.ActionBarLightIcons"
+            app:layout_scrollFlags="scroll|enterAlways"/>
 
     </android.support.design.widget.AppBarLayout>
 
@@ -30,32 +30,32 @@
             android:id="@+id/text_fade_fast"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/touchable_background_blue"
             android:gravity="center"
             android:padding="16dp"
-            android:background="@drawable/touchable_background_blue"
-            android:text="Fade fast"
-            android:textSize="@dimen/text_body"
-            android:textColor="@color/white"/>
+            android:text="@string/text_fade_fast"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_body"/>
 
         <TextView
             android:id="@+id/text_fade_slow"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_marginBottom="16dp"
-            android:layout_marginTop="16dp"
             android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/touchable_background_blue"
             android:gravity="center"
             android:padding="16dp"
-            android:background="@drawable/touchable_background_blue"
-            android:text="Fade slow"
-            android:textSize="@dimen/text_body"
-            android:textColor="@color/white"/>
+            android:text="@string/text_fade_slow"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_body"/>
 
     </LinearLayout>
 
@@ -68,30 +68,30 @@
             android:id="@+id/text_slide_right"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/touchable_background_blue"
             android:gravity="center"
             android:padding="16dp"
-            android:background="@drawable/touchable_background_blue"
-            android:text="Slide Right"
-            android:textSize="@dimen/text_body"
-            android:textColor="@color/white"/>
+            android:text="@string/text_slide_right"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_body"/>
 
         <TextView
             android:id="@+id/text_slide_bottom"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_marginBottom="16dp"
             android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/touchable_background_blue"
             android:gravity="center"
             android:padding="16dp"
-            android:background="@drawable/touchable_background_blue"
-            android:text="Slide bottom"
-            android:textSize="@dimen/text_body"
-            android:textColor="@color/white"/>
+            android:text="@string/text_slide_bottom"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_body"/>
 
     </LinearLayout>
 
@@ -104,30 +104,30 @@
             android:id="@+id/text_explode"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_marginBottom="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/touchable_background_blue"
             android:gravity="center"
             android:padding="16dp"
-            android:background="@drawable/touchable_background_blue"
-            android:text="Explode"
-            android:textSize="@dimen/text_body"
-            android:textColor="@color/white"/>
+            android:text="@string/text_explode"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_body"/>
 
         <TextView
             android:id="@+id/text_explode_bounce"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_marginBottom="16dp"
             android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/touchable_background_blue"
             android:gravity="center"
             android:padding="16dp"
-            android:background="@drawable/touchable_background_blue"
-            android:text="Explode bounce"
-            android:textSize="@dimen/text_body"
-            android:textColor="@color/white"/>
+            android:text="@string/text_explode_bounce"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_body"/>
 
     </LinearLayout>
 

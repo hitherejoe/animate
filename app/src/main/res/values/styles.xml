@@ -40,7 +40,7 @@
         <item name="colorControlNormal">@color/primary</item>
     </style>
 
-    <style name="AppTheme.ActionBarDarkIcons" parent="AppTheme.ActionBar">
+    <style name="AppTheme.ActionBarLightIcons" parent="AppTheme.ActionBar">
         <item name="colorControlNormal">@color/icons</item>
     </style>
 
