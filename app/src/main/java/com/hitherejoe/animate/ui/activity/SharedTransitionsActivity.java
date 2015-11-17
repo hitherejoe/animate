@@ -47,8 +47,11 @@ public class SharedTransitionsActivity extends BaseActivity {
         intent.putExtra(
                 TransitionInActivity.EXTRA_TRANSITION, TransitionInActivity.TRANSITION_FADE_FAST);
         Pair participants = new Pair<>(view, ViewCompat.getTransitionName(view));
-        ActivityOptionsCompat transitionActivityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(SharedTransitionsActivity.this, participants);
-        ActivityCompat.startActivity(SharedTransitionsActivity.this, intent, transitionActivityOptions.toBundle());
+        ActivityOptionsCompat transitionActivityOptions =
+                ActivityOptionsCompat.makeSceneTransitionAnimation(
+                        SharedTransitionsActivity.this, participants);
+        ActivityCompat.startActivity(
+                SharedTransitionsActivity.this, intent, transitionActivityOptions.toBundle());
     }
 
     @OnClick(R.id.text_shared_toolbar)
@@ -59,8 +62,11 @@ public class SharedTransitionsActivity extends BaseActivity {
                 new Pair<>(mRelativeView, ViewCompat.getTransitionName(mRelativeView));
         Pair toolbarParticipants =
                 new Pair<>(mToolbarView, ViewCompat.getTransitionName(mToolbarView));
-        ActivityOptionsCompat transitionActivityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation(SharedTransitionsActivity.this, squareParticipant, toolbarParticipants);
-        ActivityCompat.startActivity(SharedTransitionsActivity.this, intent, transitionActivityOptions.toBundle());
+        ActivityOptionsCompat transitionActivityOptions =
+                ActivityOptionsCompat.makeSceneTransitionAnimation(
+                        SharedTransitionsActivity.this, squareParticipant, toolbarParticipants);
+        ActivityCompat.startActivity(
+                SharedTransitionsActivity.this, intent, transitionActivityOptions.toBundle());
     }
 
 }
