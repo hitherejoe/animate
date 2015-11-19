@@ -25,8 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
-        android:columnWidth="@dimen/team_column_width"
-        android:padding="@dimen/team_item_padding"
+        android:columnWidth="@dimen/grid_column_width"
+        android:padding="@dimen/grid_item_padding"
         android:transitionGroup="false"/>
 
 </LinearLayout>
