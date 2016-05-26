@@ -1,128 +1,168 @@
 package com.hitherejoe.animate.ui.activity;
 
-import android.animation.Animator;
+import android.graphics.Color;
+import android.graphics.Path;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.animation.FastOutLinearInInterpolator;
 import android.support.v4.view.animation.FastOutSlowInInterpolator;
 import android.support.v4.view.animation.LinearOutSlowInInterpolator;
 import android.support.v7.app.ActionBar;
+import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AnticipateInterpolator;
 import android.view.animation.AnticipateOvershootInterpolator;
 import android.view.animation.BounceInterpolator;
 import android.view.animation.DecelerateInterpolator;
-import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.OvershootInterpolator;
+import android.view.animation.PathInterpolator;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.RelativeLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.hitherejoe.animate.R;
+import com.hitherejoe.animate.ui.widget.InterpolatorGraphView;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
-
-public class InterpolatorActivity extends BaseActivity {
-
-    @Bind(R.id.text_animate)
-    Button mAnimateText;
-
-    @Bind(R.id.layout_root)
-    RelativeLayout mLayoutRoot;
-
-    @Bind(R.id.spinner_interpolators)
-    Spinner mInterpolatorSpinner;
-
-    @Bind(R.id.fab_interpolator)
-    FloatingActionButton mFloatingActionButton;
-
-    private boolean mIsButtonAtTop;
+public class InterpolatorActivity extends BaseActivity implements AdapterView.OnItemSelectedListener {
+    private InterpolatorGraphView graph;
+    private View robotTest;
+    private View robotControl;
+    private boolean animateToEnd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interpolator);
-        ButterKnife.bind(this);
-        mIsButtonAtTop = true;
-        setupSpinnerAdapter();
 
+        graph = (InterpolatorGraphView) findViewById(R.id.interpolator_activity_graph);
+        Spinner spinner = (Spinner) findViewById(R.id.interpolator_activity_spinner);
+        robotTest = findViewById(R.id.interpolator_activity_robot_test);
+        robotControl = findViewById(R.id.interpolator_activity_robot_control);
+
+        assert spinner != null;
+        assert graph != null;
+
+        spinner.setSelection(0);
+        spinner.setOnItemSelectedListener(this);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.interpolators, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        graph.applyInterpolator(new OvershootInterpolator());
+        setupToolbar();
+    }
+
+    private void setupToolbar() {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
-    private void setupSpinnerAdapter() {
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                this, R.layout.item_spinner, getResources().getStringArray(R.array.interpolators));
-        adapter.setDropDownViewResource(R.layout.item_spinner_dropdown);
-        mInterpolatorSpinner.setAdapter(adapter);
-    }
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        // 0: LinearInterpolator
+        // 1: DecelerateInterpolator
+        // 2: AccelerateInterpolator
+        // 3: AccelerateDecelerateInterpolator
+        // 4: FastOutLinearInInterpolator
+        // 5: FastOutSlowInInterpolator
+        // 6: LinearOutSlowInInterpolator
+        // 7: OvershootInterpolator
+        // 8: AnticipateInterpolator
+        // 9: AnticipateOvershootInterpolator
+        // 10: BounceInterpolator
+        // 11: PathInterpolator
 
-    @OnClick(R.id.text_animate)
-    public void animate() {
-        int padding =
-                mFloatingActionButton.getPaddingBottom() + mFloatingActionButton.getPaddingTop();
-        int height = mLayoutRoot.getHeight() - padding;
+        ((TextView) parent.getChildAt(0)).setTextColor(Color.BLACK);
 
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) height -= actionBar.getHeight();
-
-        if (!mIsButtonAtTop) height = -height;
-        mIsButtonAtTop = !mIsButtonAtTop;
-        mFloatingActionButton.animate().setInterpolator(getSelectedInterpolator())
-                .setDuration(500)
-                .setStartDelay(200)
-                .translationYBy(height)
-                .setListener(new Animator.AnimatorListener() {
-                    @Override
-                    public void onAnimationStart(Animator animation) {
-                        mAnimateText.setEnabled(false);
-                    }
-
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
-                        mAnimateText.setEnabled(true);
-                    }
-
-                    @Override
-                    public void onAnimationCancel(Animator animation) { }
-
-                    @Override
-                    public void onAnimationRepeat(Animator animation) { }
-                })
-                .start();
-    }
-
-    private Interpolator getSelectedInterpolator() {
-        switch (mInterpolatorSpinner.getSelectedItemPosition()) {
+        switch (position) {
+            case 0:
+                graph.applyInterpolator(new LinearInterpolator());
+                break;
             case 1:
-                return new FastOutLinearInInterpolator();
+                graph.applyInterpolator(
+                        new InterpolatorGraphView.GraphicInterpolator(new DecelerateInterpolator(1f), "Factor: 1 (default)", Color.RED),
+                        new InterpolatorGraphView.GraphicInterpolator(new DecelerateInterpolator(1.4f), "Factor: 1.4", Color.BLUE),
+                        new InterpolatorGraphView.GraphicInterpolator(new DecelerateInterpolator(0.6f), "Factor: 0.6", Color.DKGRAY)
+                );
+                break;
             case 2:
-                return new FastOutSlowInInterpolator();
+                graph.applyInterpolator(
+                        new InterpolatorGraphView.GraphicInterpolator(new AccelerateInterpolator(1f), "Factor: 1 (default)", Color.RED),
+                        new InterpolatorGraphView.GraphicInterpolator(new AccelerateInterpolator(1.4f), "Factor: 1.4", Color.BLUE),
+                        new InterpolatorGraphView.GraphicInterpolator(new AccelerateInterpolator(0.6f), "Factor: 0.6", Color.DKGRAY)
+                );
+                break;
             case 3:
-                return new LinearOutSlowInInterpolator();
+                graph.applyInterpolator(new AccelerateDecelerateInterpolator());
+                break;
             case 4:
-                return new AccelerateDecelerateInterpolator();
+                graph.applyInterpolator(new FastOutLinearInInterpolator());
+                break;
             case 5:
-                return new AccelerateInterpolator();
+                graph.applyInterpolator(new FastOutSlowInInterpolator());
+                break;
             case 6:
-                return new DecelerateInterpolator();
+                graph.applyInterpolator(new LinearOutSlowInInterpolator());
+                break;
             case 7:
-                return new AnticipateInterpolator();
+                graph.applyInterpolator(
+                        new InterpolatorGraphView.GraphicInterpolator(new OvershootInterpolator(2.0f), "Tension = 2 (default)", Color.RED),
+                        new InterpolatorGraphView.GraphicInterpolator(new OvershootInterpolator(2.4f), "Tension = 2.4", Color.BLUE),
+                        new InterpolatorGraphView.GraphicInterpolator(new OvershootInterpolator(1.6f), "Tension = 1.6", Color.DKGRAY)
+                );
+                break;
             case 8:
-                return new AnticipateOvershootInterpolator();
+                graph.applyInterpolator(
+                        new InterpolatorGraphView.GraphicInterpolator(new AnticipateInterpolator(2.0f), "Tension = 2 (default)", Color.RED),
+                        new InterpolatorGraphView.GraphicInterpolator(new AnticipateInterpolator(2.4f), "Tension = 2.4", Color.BLUE),
+                        new InterpolatorGraphView.GraphicInterpolator(new AnticipateInterpolator(1.6f), "Tension = 1.6", Color.DKGRAY)
+                );
+                break;
             case 9:
-                return new BounceInterpolator();
+                graph.applyInterpolator(
+                        new InterpolatorGraphView.GraphicInterpolator(new AnticipateOvershootInterpolator(3.0f), "Tension = 3 (default)", Color.RED),
+                        new InterpolatorGraphView.GraphicInterpolator(new AnticipateOvershootInterpolator(3.4f), "Tension = 3.4", Color.BLUE),
+                        new InterpolatorGraphView.GraphicInterpolator(new AnticipateOvershootInterpolator(2.6f), "Tension = 2.6", Color.DKGRAY)
+                );
+                break;
             case 10:
-                return new LinearInterpolator();
+                graph.applyInterpolator(new BounceInterpolator());
+                break;
             case 11:
-                return new OvershootInterpolator();
-            default:
-                return null;
+                Path p = new Path();
+                p.moveTo(0, 0);
+                p.lineTo(0.8f, 0.2f);
+                p.lineTo(1, 1);
+                graph.applyInterpolator(
+                        // http://cubic-bezier.com/#.55,.45,.86,-0.89
+                        new InterpolatorGraphView.GraphicInterpolator(new PathInterpolator(0.55f, 0.45f, 0.86f, -0.89f), "Cubic (0.55, 0.45, 0.86, -0.89)", Color.RED),
+                        // https://www.jasondavies.com/animated-bezier/
+                        new InterpolatorGraphView.GraphicInterpolator(new PathInterpolator(0.6f, 0.2f), "Quadratic (0.6, 0.2)", Color.BLUE),
+                        new InterpolatorGraphView.GraphicInterpolator(new PathInterpolator(p), "Path (0, 0; 0.8, 0.2; 1, 1)", Color.DKGRAY)
+                );
+                break;
         }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
+
+    public void activateAnimation() {
+        if (!animateToEnd) {
+            robotControl.animate().translationX(graph.getWidth() - robotControl.getWidth()).setInterpolator(graph.getInterpolator()).setDuration(1000);
+            robotTest.animate().translationX(graph.getWidth() - robotControl.getWidth()).setInterpolator(new LinearInterpolator()).setDuration(1000);
+            animateToEnd = true;
+        } else {
+            robotControl.animate().translationX(0).setInterpolator(graph.getInterpolator()).setDuration(1000);
+            robotTest.animate().translationX(0).setInterpolator(new LinearInterpolator()).setDuration(1000);
+            animateToEnd = false;
+        }
+    }
+
+    public void onAnimate(View view) {
+        activateAnimation();
     }
 }

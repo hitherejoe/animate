@@ -1,47 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@+id/layout_root"
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/white">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:padding="16dp"
+    tools:context=".ui.activity.InterpolatorActivity"
+    android:orientation="vertical">
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_interpolator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_margin="16dp"
-        android:src="@drawable/ic_emoticon_smile"
-        app:fabSize="normal"/>
-
-    <TextView
-        style="@style/TitleTextStyle"
-        android:layout_above="@+id/spinner_interpolators"
-        android:layout_alignStart="@+id/spinner_interpolators"
-        android:layout_marginBottom="16dp"
-        android:padding="0dp"
-        android:text="@string/text_title_interpolator"/>
+    <com.hitherejoe.animate.ui.widget.InterpolatorGraphView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/interpolator_activity_graph" />
 
     <Spinner
-        android:id="@+id/spinner_interpolators"
-        android:layout_width="200dp"
+        android:id="@+id/interpolator_activity_spinner"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/interpolator_activity_robot_test"
+        android:layout_width="wrap_content"
+        android:src="@drawable/ic_emoticon_smile_grey"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/text_animate"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"/>
+        tools:ignore="ContentDescription"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@android:color/black"
+        android:text="@string/control_linearinterpolator"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/interpolator_activity_robot_control"
+        android:layout_width="wrap_content"
+        android:src="@drawable/ic_emoticon_smile_grey"
+        android:layout_height="wrap_content"
+        tools:ignore="ContentDescription"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@android:color/black"
+        android:text="@string/test_red_interpolator"
+        android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/text_animate"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
         android:padding="16dp"
-        android:text="@string/text_animate_view"
+        android:onClick="onAnimate"
+        android:text="@string/text_animate"
         android:textColor="@color/accent"/>
 
-</RelativeLayout>
+</LinearLayout>
