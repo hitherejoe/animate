@@ -65,21 +65,6 @@
     <string name="content_description_image_header">Image header</string>
     <string name="content_description_image_smile_emoticon">Smile emotion</string>
 
-    <string-array name="interpolators">
-        <item>None</item>
-        <item>FastOutLinearInInterpolator</item>
-        <item>FastOutSlowInInterpolator</item>
-        <item>LinearOutSlowInInterpolator</item>
-        <item>AccelerateDecelerateInterpolator</item>
-        <item>AccelerateInterpolator</item>
-        <item>DecelerateInterpolator</item>
-        <item>AnticipateInterpolator</item>
-        <item>AnticipateOvershootInterpolator</item>
-        <item>BounceInterpolator</item>
-        <item>LinearInterpolator</item>
-        <item>OvershootInterpolator</item>
-    </string-array>
-
     <string-array name="transitions">
         <item>Fade</item>
         <item>Slide</item>
@@ -117,6 +102,27 @@
         <item>16</item>
         <item>17</item>
         <item>18</item>
+    </string-array>
+
+    <string name="time">Time</string>
+    <string name="progression">Progression</string>
+    <string name="test_red_interpolator">Test (Red interpolator)</string>
+    <string name="control_linearinterpolator">Control (LinearInterpolator)</string>
+    <string name="animate">Animate!</string>
+
+    <string-array name="interpolators">
+        <item>LinearInterpolator</item>
+        <item>DecelerateInterpolator</item>
+        <item>AccelerateInterpolator</item>
+        <item>AccelerateDecelerateInterpolator</item>
+        <item>FastOutLinearInInterpolator</item>
+        <item>FastOutSlowInInterpolator</item>
+        <item>LinearOutSlowInInterpolator</item>
+        <item>OvershootInterpolator</item>
+        <item>AnticipateInterpolator</item>
+        <item>AnticipateOvershootInterpolator</item>
+        <item>BounceInterpolator</item>
+        <item>PathInterpolator</item>
     </string-array>
 
 </resources>
